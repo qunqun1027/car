@@ -1,0 +1,305 @@
+@charset "utf-8";
+
+
+/* css 초기화*/
+*{margin: 0; padding: 0;}
+ol,ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #bbb;
+}
+img{ border: 0;}
+body{
+	position: fixed;
+	background: #000;
+	width: 100%; height: 100%;
+	
+}
+.vid video{
+    position:fixed;
+/*	min-width: 100%; min-height: 100%;*/
+    width: 100%;
+/*    height: 100%;*/
+    animation-direction: alternate;
+}	
+
+.vid > img{
+    position: absolute;
+}
+.fas fa-angle-double-down{
+    
+}
+
+/*logo header*/
+h1{
+	position: absolute;
+	left: 30px; top: 30px;
+    z-index: 1;
+	
+
+}
+h1 > img{
+	width: 280px;
+    
+}
+.top_en{
+	position: absolute;
+	z-index: 1;
+	right: 10px;
+	font-size: 12px;
+}
+.top_en li{
+	display: inline-block;
+	color: white;
+}
+.top_en li a:hover{
+	color: #fff;
+}
+
+header{
+	width: 700px; height: 100%;
+/*	background: #999;*/
+	position: absolute;
+	background: red;
+	/*사선으로 비틀기*/
+	transform: skewx(-20deg);
+	left: -420px; top: 0;
+    	animation-name: example;
+    	animation-duration: 4s;
+    	animation-iteration-count: infinite;
+    	opacity: 0.7;
+    	animation-direction: alternate;
+    
+  
+}
+
+@keyframes  example {
+    from {background-color: red;}
+    to {background-color: black;}
+}
+
+/*header*/
+#gnb{
+    position: absolute;
+    width: 200px;
+    right: 0;
+    top: 32%;
+    
+        
+}
+#gnb >li{
+	position: relative;
+}
+
+#gnb >li >a{
+	display: block;
+	border-bottom:  1px dashed white;
+	width: 200px; height: 50px;
+	font-family: 'Play',sans-serif;
+	font-size: 18px;
+	line-height: 50px;
+	color: #fff;
+	text-align: right;
+	padding-right: 40px;
+	box-sizing: border-box;
+   
+    
+}
+#gnb > li:hover > a{
+	background: #111; color: #fff;
+}
+/*메뉴 글자 바로 세우기*/
+#gnb em{
+	display: inline-block;
+	transform: skewX(20deg);
+}
+/*기본 열려있는 메뉴의 스타일*/
+/*#gnb >li.on > a{
+	background: #111; color: #fff;
+	left: 205px;
+}*/
+#gnb em i{ margin-right: 20px; }
+/*2depth*/
+#gnb ul{
+	position: absolute;
+	left: 0; top: 0;
+	opacity:  0;
+	transition:  0.5s;
+}
+#gnb li:hover > ul{
+	/*1depth hover시 2depth 표시*/
+	opacity: 1;
+	left: 180px;
+	background: #fff;
+
+
+}
+#gnb ul a{
+	display: block;
+	/*border: 1px solid blue;*/
+	width: 150px;
+	height: 40px;
+	margin-bottom: 3px;
+	text-align: left;
+	line-height: 40px;
+	color: #000;
+	padding-left: 40px;
+	border-bottom:  1px dashed black;
+	
+
+}
+#gnb ul a em{
+	transform: skewX(20deg);
+}
+
+/*클릭시 열려 있는 메뉴(기본)*/
+/*#gnb > li.on > ul{
+	opacity: 1; 
+	left: 205px;
+	top: -10px;
+}*/
+#gnb ul a:hover{
+	background: #111;
+	color: #fff;
+	border:  1px solid black;
+
+
+
+	/*opacity:  0.8;*/
+}
+/*cars 3 top*/
+
+.car_top{
+    position: absolute;
+    top:-250px;
+    left: 200px;
+    background: url(../images/car_top.jpeg);
+    opacity: 0.5;
+}
+
+#sns{
+	position: absolute;
+	bottom: 70px;
+	left: 40%;
+
+}	
+#sns >li{
+	float: left;
+	margin-right: 50px;
+	
+	
+}
+#sns .fab{
+	font-size: 30px;
+	color: #fff;
+	opacity:  0.8;
+	transform: scale(1);
+	transition: 0.5s;
+
+
+
+}
+#sns .fab:hover{
+	opacity: 1;
+	transform: scale(1.3);
+}
+
+.txtBox{
+	/*border: 1px solid red;*/
+	position: absolute;
+	top: 100px; right: 70px;
+	width: 700px; height: 280px;
+
+}
+.txtBox .txt{
+	position: absolute;
+	top:0px; right: 0;
+	color: #fff;
+	font-size: 50px;
+	font-family: "Play",sans-serif;
+	/*letter-spacing: -2px;*/
+	width: 700px;
+	/* border: 1px solid green;*/
+	 text-align: center;
+	 text-shadow: 2px 2px 2px white;
+	overflow: hidden;
+	
+
+}
+.txtBox .txt  >span{
+	color: red;
+	font-weight: bold;
+	text-shadow: -1px -1px 10px white;
+}
+
+
+/*.txtBox .txt > b{
+	color: red;
+	font-size: 33px;
+	margin-left: 20px;
+	font-family: "Arial",sans-serif;
+}*/
+.tit{
+	position: absolute;
+	top: 0; right: 0;
+	font-family: "monoton",cursive;
+	font-size: 160px;
+	color: #b9fb05;
+	letter-spacing: -1px;
+	
+}
+.tit > em{
+	font-size: 50px;
+	font-family: 'Play',sans-serif;
+	color: #fff;
+}
+
+footer >p{
+	z-index: 5;
+	position:absolute; 
+	bottom: 40px;
+	color: #fff;
+	font-size: 12px;
+	width: 100%;
+	text-align: center;
+}
+footer > ul{
+	position: absolute;
+	color: white;
+	bottom: 10px;
+	width: 100%;
+	text-align: center;
+}
+footer >ul >li{
+	display: inline-block;
+	font-size: 12px;
+}
+footer >ul >li >a:hover{
+	color: white;
+}
+section >.txt2 {
+	/*border: 1px solid red;*/
+	color: white;
+	position: absolute;
+	/*background: black;*/
+	/*opacity: 0.3; */
+	width: 750px;
+	top:0px;
+	right: 0;
+	left: 10px;
+
+	animation-name: example1;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+@keyframes example1 {
+    from {top: 0px;}
+    to {top: 60px; }
+}
+
+
+
+
+
